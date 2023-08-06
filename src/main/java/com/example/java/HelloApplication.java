@@ -68,7 +68,7 @@ public class HelloApplication extends Application {
 
     public static void main(String[] args) {
         int count;
-        Scanner scanner_count = new Scanner(System.in);
+         Scanner scanner_count = new Scanner(System.in);
         System.out.println("Сколько чисел вы хотите ввести?");
         count = scanner_count.nextInt();
         System.out.println("Введите не более " + count + " чисел");
@@ -89,5 +89,14 @@ public class HelloApplication extends Application {
         System.out.println("\nЗадание на цикл For");
         Task_For tmp_1 = new Task_For(1, 100);
         tmp_1.Print();
+
+        //Задание 4 часть 3
+        System.out.println("\nЗадание Цифры числа");
+        System.out.println("Введите число");
+        count = scanner_count.nextInt();
+        Full_number tmp_2 = new Full_number(count);
+        tmp_2.Summ();
+        tmp_2.Summ_nechet();
+        tmp_2.Max();
     }
 }
