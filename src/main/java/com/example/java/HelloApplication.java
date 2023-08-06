@@ -84,5 +84,10 @@ public class HelloApplication extends Application {
         Input_Ari(tmp, count);
         tmp.Print();
         tmp.Ari_chet();
+
+        //Задание 4 часть 2
+        System.out.println("\nЗадание на цикл For");
+        Task_For tmp_1 = new Task_For(1, 100);
+        tmp_1.Print();
     }
 }
