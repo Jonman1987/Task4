@@ -52,6 +52,20 @@ public class HelloApplication extends Application {
         return sa;
     }
 
+    public static float SA_chet(int[] mass, int count){
+        int summ = 0;
+        int iter = 0;
+        float sa_chet = 0;
+        for (int j = 0; j < count; j++) {
+            if (mass[j] % 2 == 0) {
+                summ += mass[j];
+                iter++;
+            }
+        }
+        sa_chet = (float)summ/iter;
+        return sa_chet;
+    }
+
     public static void main(String[] args) {
         int count;
         Scanner scanner_count = new Scanner(System.in);
@@ -61,6 +75,7 @@ public class HelloApplication extends Application {
         int[] mass = new int[count];
         Input(mass, count);
         System.out.println("Среднее арифметическое вашего ввода = " + SA(mass, count));
+        System.out.println("Среднее арифметическое четных чисел вашего ввода = " + SA_chet(mass, count));
 
         // Я не совсем понял надо ли через классы или просто кодом, поэтому второй вариант через ООП
 
@@ -68,5 +83,6 @@ public class HelloApplication extends Application {
         System.out.println("Введите не более " + count + " чисел");
         Input_Ari(tmp, count);
         tmp.Print();
+        tmp.Ari_chet();
     }
 }
